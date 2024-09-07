@@ -19,6 +19,7 @@ lib64/
 parts/
 sdist/
 var/
+
 wheels/
 share/python-wheels/
 *.egg-info/
@@ -129,7 +130,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+untitled.ipyub
+procedure.ipynb
+test.py
 # Spyder project settings
 .spyderproject
 .spyproject
