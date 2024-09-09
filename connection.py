@@ -1,7 +1,7 @@
 
 import pyodbc
 class db_connection :
-    def get_db_connection(self):
+    def get_db_connection():
         connection_string = (
         'DRIVER={SQL Server};'
         'SERVER=DESKTOP-MVGO5U1\\SQLEXPRESS;'
@@ -9,12 +9,10 @@ class db_connection :
         'UID=vishal;'
         'PWD=Vishal;' 
         "Trusted_Connection=yes" 
-    
-
         )
-        
-        return connection_string       
-    
+        conx=pyodbc.connect(connection_string)
+        return conx    
+       
 
     
    

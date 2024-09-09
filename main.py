@@ -2,30 +2,28 @@ import pyodbc
 import pandas as pd
 from dataload import data_load
 from connection import db_connection
+from function_Call import store_procedure
+from data_store import data_m_store
+from update_cdc import update_date_today
 
-db_connections = db_connection()
-
-#data=db_connections.test()
-
-
-
-
-connection_string= db_connections.get_db_connection()
-
-conx=pyodbc.connect(connection_string)
-if conx:
-    print("ok connection")
-else:
-    print("some thing wrong in connection")
+data_m = data_m_store()
 
 
-#the last line of code for test 
-data_loader= data_load()
+data_m.data_manipulation()
+data_m.emp_fetch_data()
+data_m.sales_fetch_data()
+data_m.performance_fetch_data()
+
+
+obj=update_date_today()
+obj.cdc_today_update_sales()        
+obj.cdc_today_update_emp()
+obj.cdc_today_update_performance()
+
+
+
+
+
+
+
  
-sql_query= "SELECT * FROM sales"
-if conx :
-    df_sales = data_loader.load(sql_query,conx)
-    conx.close()
-    print(df_sales)
-else:
-    print("problem woth connection ")   
