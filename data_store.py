@@ -41,7 +41,7 @@ class data_m_store:
         sql_query=  f"EXEC usp_get_sales '{sales_time_cdc}'"   
         if conx:
             df_sales_table_data = data_loader.load(sql_query,conx)
-            print(df_sales_table_data)
+           # print(df_sales_table_data)
             return None
         else:
             print("problem with connection ") 
@@ -50,7 +50,7 @@ class data_m_store:
         sql_query= f"EXEC usp_get_perfromance '{performance_time_cdc}'"       
         if conx:
             df_performance_table_data = data_loader.load(sql_query,conx)
-            print(df_performance_table_data)
+            #print(df_performance_table_data)
             return None
         else:
             print("problem with connection ")  

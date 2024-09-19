@@ -12,7 +12,7 @@ today = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 print(today)
 class update_date_today:
     def cdc_today_update_sales(self):
-        sql_query= f"EXEC usp_update_cdc 'sales','{'1981-09-09 18:32:31'}'"
+        sql_query= f"EXEC usp_update_cdc 'sales','{today}'"
         if conx:
             print("connection is ok")
             df_update= data_loader.load_execute(sql_query,conx)
