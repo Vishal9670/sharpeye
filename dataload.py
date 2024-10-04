@@ -7,6 +7,6 @@ class data_load :
         return df_data
     
     def load_execute(self,query,conx):
-        print("hi i am load")
+        
         df_data=conx.execute(query)
         

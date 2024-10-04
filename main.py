@@ -6,6 +6,7 @@ from function_Call import store_procedure
 from data_store import data_m_store
 from update_cdc import update_date_today
 from incentive import basic_data
+store_obj=store_procedure()
 
 incentive_obj=basic_data()
 data_m = data_m_store()
@@ -26,7 +27,9 @@ incentive_obj.merge_all_tables()
 
 incentive_obj.update_stag_incentive()
 incentive_obj.update_incentive()
-
+store_obj.before_incentive()
+x=store_obj.incentive_amount()
+print(x)
 
 
 

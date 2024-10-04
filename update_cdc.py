@@ -31,5 +31,3 @@ class update_date_today:
             df_update=data_loader.load_execute(sql_query,conx)
         else:
             print("connection is not established")
-
-

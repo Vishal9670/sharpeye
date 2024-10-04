@@ -1,15 +1,20 @@
+
 from function_Call import store_procedure
 from dataload import data_load
 from connection import db_connection
 
-conx= db_connection.get_db_connection()
+try:
+    conx= db_connection.get_db_connection()
+except Exception as actualError:
+    print(actualError)
+    exit
+
+
 data_loader= data_load()
 store_procedure = store_procedure()
 class data_m_store:
-
     def __init__(self):
         self.time_date= {}
-
     def data_manipulation(self):
         
         df_data_emp= store_procedure.emp_data()

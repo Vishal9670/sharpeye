@@ -29,7 +29,7 @@ class basic_data:
         query= "SELECT * FROM performance"
         df_performace1=data_loder.load(query,conx) 
         self.df_performanc=df_performace1
-        print(df_performace1)
+       
         #self.data['performance_data']=df_performace
 
     def merge_all_tables(self):

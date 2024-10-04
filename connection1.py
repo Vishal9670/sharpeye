@@ -12,7 +12,7 @@ class connection_1:
         params = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};"
                                          "SERVER=DESKTOP-MVGO5U1\\SQLEXPRESS;"
                                         "DATABASE=vishaldb;"
-                                        "UID=vishal;"
+                                        "UID=visha;"
                                         "PWD=Vishal;"
                                         "Trusted_Connection=yes")
                                  
